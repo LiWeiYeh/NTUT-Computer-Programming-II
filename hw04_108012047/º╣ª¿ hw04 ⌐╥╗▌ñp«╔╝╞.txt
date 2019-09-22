@@ -1,0 +1,7 @@
+﻿Name: Li-Wei Yeh
+
+ID: 108012047
+
+How many hours you spend on doing the homework? 3 hours
+
+(remember to delete *.exe)
