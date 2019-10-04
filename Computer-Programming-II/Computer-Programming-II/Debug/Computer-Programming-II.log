@@ -1,2 +1,4 @@
 ﻿  Main.c
+c:\users\liwei\source\repos\ntut-computer-programming-ii\computer-programming-ii\computer-programming-ii\main.c(41): warning C4047: 'function': 'int' differs in levels of indirection from 'char *'
+c:\users\liwei\source\repos\ntut-computer-programming-ii\computer-programming-ii\computer-programming-ii\main.c(41): warning C4024: 'putchar': different types for formal and actual parameter 1
   Computer-Programming-II.vcxproj -> C:\Users\liwei\source\repos\NTUT-Computer-Programming-II\Computer-Programming-II\Debug\Computer-Programming-II.exe

@@ -7,53 +7,45 @@
 /* Change History: log the change history of the program         */
 /*****************************************************************/
 
-// dollar change
+// reverse sentence
 #define _CRT_SECURE_NO_WARNINGS
+#define MAX_SENTENCE_LENGTH 80
 
 #include <stdio.h>
 
-// functino to calulate the amount of bills needed
-void pay_amount(int dollars, int *twenties, int *tens, int *fives, int *ones)
-{
-	// gets an int for how many twenties fit into the amount of dollars
-	*twenties = dollars / 20;
-	// reduce the amount of dollars by the amount of 20 dollar bills
-	dollars -= (*twenties * 20);
-
-	// gets an int for how many tens fit into the amount of dollars
-	*tens = dollars / 10;
-	// reduce the amount of dollars by the amount of 10 dollar bills
-	dollars -= (*tens * 10);
-
-	// gets an int for how many fives fit into the amount of dollars
-	*fives = dollars / 5;
-	// reduce the amount of dollars by the amount of 5 dollar bills
-	dollars -= (*fives * 5);
-
-	// gets an int for how many ones fit into the amount of dollars
-	*ones = dollars / 1;
-}
-
 int main(void)
 {
-	printf("Program to calculate the least amount of bills needed \n");
+	printf("Program to reverse a sentence\n");
 
-	int amount, twenties, tens, fives, ones;
+	char ch, sentence[MAX_SENTENCE_LENGTH + 1] = { ' ' }, terminator = '.',
+		*start, *finish = sentence + 1, *p = sentence;
 
-	// asks the user to enter a dollar amount
-	printf("Enter a dollar amount...");
-	// sets the dollar amount to the amount
-	scanf("%d", &amount);
+	printf("enter a sentence : ");
+	while (finish <= sentence + MAX_SENTENCE_LENGTH) {
+		ch = getchar();
+		if (ch == '\n' || ch == ' ' || ch == ',') {
+			terminator = ch;
+			break;
+		}
+		*p = ch;
+		p++;
+	}
 
-	// calls function to calculate the amount of bills needed
-	pay_amount(amount, &twenties, &tens, &fives, &ones);
+	printf("The sentence is: %s\n", sentence);
 
+	printf("Reversal of sentence : ");
 
+	for (start = (finish); start >= sentence; start--) {
+		if (*start == ' ') {
+			for (p = start; p < finish; p++) {
+				putchar(start);
+			}
+			finish = start;
+		}
+	}
 
-	printf("$20 bills : %d\n", twenties);
-	printf("$10 bills : %d\n", tens);
-	printf("$5 bills : %d\n", fives);
-	printf("$1 bills : %d\n", ones);
+	printf("%c\n", terminator);
 
 	return 0;
+
 }
