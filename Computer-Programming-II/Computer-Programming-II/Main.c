@@ -9,43 +9,43 @@
 
 // reverse sentence
 #define _CRT_SECURE_NO_WARNINGS
-#define MAX_SENTENCE_LENGTH 80
+#define N 10
 
 #include <stdio.h>
 
+void max_min(int a[], int n, int *max, int *min) {
+
+	int *p;
+
+	*max = *min = *a;
+
+	for (p = a; p < a + n, p++;) {
+		if (*p > *max) {
+			*max = *p;
+		}
+		if (*p < *min) {
+			*min = *p;
+		}
+	}
+
+}
+
 int main(void)
 {
-	printf("Program to reverse a sentence\n");
+	printf("Program to print the smallest and biggest number in an array\n");
 
-	char ch, sentence[MAX_SENTENCE_LENGTH + 1] = { ' ' }, terminator = '.',
-		*start, *finish = sentence + 1, *p = sentence;
+	int NumbersArray[N], i, biggest, smallest;
 
-	printf("enter a sentence : ");
-	while (finish <= sentence + MAX_SENTENCE_LENGTH) {
-		ch = getchar();
-		if (ch == '\n' || ch == ' ' || ch == ',') {
-			terminator = ch;
-			break;
-		}
-		*p = ch;
-		p++;
+	printf("Enter %d numbers: ", N);
+	for (i = 0; i < N; i++) {
+		scanf("%d", &NumbersArray[i]);
 	}
+	
+	max_min(NumbersArray, N, &biggest, &smallest);
 
-	printf("The sentence is: %s\n", sentence);
+	printf("Largest number is %d\n", biggest);
+	printf("Smallest number is %d\n", smallest);
 
-	printf("Reversal of sentence : ");
-
-	for (start = (finish); start >= sentence; start--) {
-		if (*start == ' ') {
-			for (p = start; p < finish; p++) {
-				putchar(start);
-			}
-			finish = start;
-		}
-	}
-
-	printf("%c\n", terminator);
 
 	return 0;
-
 }
