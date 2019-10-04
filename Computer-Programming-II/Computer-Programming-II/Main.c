@@ -3,62 +3,57 @@
 /* Author: Li-Wei Yeh (put your name here)                       */
 /* ID: 108012047 (your student ID here)                          */
 /* Date: 2019.09.22 (put program development started date here   */
-/* Purpose: reduces a fraction									 */
-/* Change History: 2019.10.04 added obligatory comments			 */
+/* Purpose: counts the amount of bills needed					 */
+/* Change History: log the change history of the program         */
 /*****************************************************************/
 
-// reduce_fraction
-
+// dollar change
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 
-
-// function to find the greatest common divisor
-int find_gcd(int m, int n)
+// functino to calulate the amount of bills needed
+void pay_amount(int dollars, int *twenties, int *tens, int *fives, int *ones)
 {
-	// if the remainder is not zero
-	while (n != 0) {
-		// find the remainder of the division of m divided by n
-		int remainder = m % n;
-		// set m to n
-		m = n;
-		// let n become the remainder
-		n = remainder;
-	}
+	// gets an int for how many twenties fit into the amount of dollars
+	*twenties = dollars / 20;
+	// reduce the amount of dollars by the amount of 20 dollar bills
+	dollars -= (*twenties * 20);
 
-	// returns the greatest common divisor
-	return m;
-}
+	// gets an int for how many tens fit into the amount of dollars
+	*tens = dollars / 10;
+	// reduce the amount of dollars by the amount of 10 dollar bills
+	dollars -= (*tens * 10);
 
-// function to reduce the fraction
-void reduce_fraction(int numerator, int denominator, int *reduced_numerator, int *reduced_denominator)
-{
-	// find the greatest common divisor
-	int gcd = find_gcd(numerator, denominator);
+	// gets an int for how many fives fit into the amount of dollars
+	*fives = dollars / 5;
+	// reduce the amount of dollars by the amount of 5 dollar bills
+	dollars -= (*fives * 5);
 
-	// reduce the numerator
-	*reduced_numerator = numerator / gcd;
-	// reduce the denominator
-	*reduced_denominator = denominator / gcd;
+	// gets an int for how many ones fit into the amount of dollars
+	*ones = dollars / 1;
 }
 
 int main(void)
 {
-	printf("Fraction reducing program...\n");
+	printf("Program to calculate the least amount of bills needed \n");
 
-	int numerator, denominator;
-	int reduced_numerator, reduced_denominator;
+	int amount, twenties, tens, fives, ones;
 
-	// asks the user to enter a fraction
-	printf("Enter a fraction : ");
-	// sets the numerator and denominator to the entered value
-	scanf("%d/%d", &numerator, &denominator);
+	// asks the user to enter a dollar amount
+	printf("Enter a dollar amount...");
+	// sets the dollar amount to the amount
+	scanf("%d", &amount);
 
-	// reduces the entered numerator and denominator
-	reduce_fraction(numerator, denominator, &reduced_numerator, &reduced_denominator);
-	// prints the new value
-	printf("%d/%d becomes %d/%d", numerator, denominator, reduced_numerator, reduced_denominator);
+	// calls function to calculate the amount of bills needed
+	pay_amount(amount, &twenties, &tens, &fives, &ones);
+
+
+
+	printf("$20 bills : %d\n", twenties);
+	printf("$10 bills : %d\n", tens);
+	printf("$5 bills : %d\n", fives);
+	printf("$1 bills : %d\n", ones);
 
 	return 0;
 }
