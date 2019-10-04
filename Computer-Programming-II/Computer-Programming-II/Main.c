@@ -1,65 +1,64 @@
 /*****************************************************************/
 /* Class: Computer Programming II, Fall 2019                     */
-/* Author: Li-Wei Yeh			                                 */
-/* ID: 108012047						                         */
-/* Date: 2019.10.04											     */
-/* Purpose: description of program function                      */
-/* Change History: log the change history of the program         */
+/* Author: Li-Wei Yeh (put your name here)                       */
+/* ID: 108012047 (your student ID here)                          */
+/* Date: 2019.09.22 (put program development started date here   */
+/* Purpose: reduces a fraction									 */
+/* Change History: 2019.10.04 added obligatory comments			 */
 /*****************************************************************/
 
-// palindrome using pointers
+// reduce_fraction
 
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-#include <ctype.h>
 
-#define MAX_MSG_LENGTH 80
+
+// function to find the greatest common divisor
+int find_gcd(int m, int n)
+{
+	// if the remainder is not zero
+	while (n != 0) {
+		// find the remainder of the division of m divided by n
+		int remainder = m % n;
+		// set m to n
+		m = n;
+		// let n become the remainder
+		n = remainder;
+	}
+
+	// returns the greatest common divisor
+	return m;
+}
+
+// function to reduce the fraction
+void reduce_fraction(int numerator, int denominator, int *reduced_numerator, int *reduced_denominator)
+{
+	// find the greatest common divisor
+	int gcd = find_gcd(numerator, denominator);
+
+	// reduce the numerator
+	*reduced_numerator = numerator / gcd;
+	// reduce the denominator
+	*reduced_denominator = denominator / gcd;
+}
 
 int main(void)
 {
-	char msg[MAX_MSG_LENGTH], ch;
-	//
-	char *p;
-	char *q = &msg[0];
-	// asks the user to enter a message
-	printf("Enter a message : ");
+	printf("Fraction reducing program...\n");
 
-	// goes through the loop
-	while (q < &msg[MAX_MSG_LENGTH]) {
-		// getchar() gets the user message and stores it in ch
-		// the newline will automatically be created if the user presses the "enter" key
-		// if the char is equal to a newline, break.
-		if ((ch = getchar()) == '\n') {
-			break;
-		}
-		// if the character is alphabetical
-		if (isalpha(ch)) {
-			// makes ch uppercase and stores it into msg with *q, starting from msg[0]
-			*q = toupper(ch);
-			// appends the q, increasing the index of message by 1
-			q++;
-		}
-	}
+	int numerator, denominator;
+	int reduced_numerator, reduced_denominator;
 
-	// checks whether the first character of msg msg[0] is equal to the last character of message q - 1
-	// if equal, increase the first index and decrease last index by 1
-	for (p = &msg[0], q--; p < q; p++, q--) {
-		// if the characterss on the indexes aren't equal
-		if (*p != *q) {
-			break;
-		}
-	}
+	// asks the user to enter a fraction
+	printf("Enter a fraction : ");
+	// sets the numerator and denominator to the entered value
+	scanf("%d/%d", &numerator, &denominator);
 
-	// if the program in the for loop hasn't breaked, so
-	// if the first halve of the sentence is the same as the last halve of the sentence
-	if (p >= q) {
-		// print that it's a palindrome
-		printf("The message is a palindrome\n");
-	}
-	// else
-	else {
-		// print that it's not a palindrome
-		printf("The message is NOT a palindrome\n");
-	}
+	// reduces the entered numerator and denominator
+	reduce_fraction(numerator, denominator, &reduced_numerator, &reduced_denominator);
+	// prints the new value
+	printf("%d/%d becomes %d/%d", numerator, denominator, reduced_numerator, reduced_denominator);
+
+	return 0;
 }

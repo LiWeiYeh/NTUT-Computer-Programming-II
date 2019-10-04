@@ -146,12 +146,13 @@
     <ClCompile Include="..\..\hw04_108012047\chap11_project01\chap11_project01.c" />
     <ClCompile Include="..\..\hw04_108012047\chap11_project02\chap11_project02.c" />
     <ClCompile Include="..\..\hw04_108012047\chap11_project03\chap11_project03.c" />
-    <ClCompile Include="..\..\hw04_108012047\chap12_project02\chap12_project02.c" />
+    <ClCompile Include="..\..\hw04_108012047\chap12_project02\chap12_project02a.c" />
     <ClCompile Include="..\..\hw04_108012047\chap12_project05\chap12_project05.c" />
     <ClCompile Include="..\..\hw04_108012047\chap12_project07\chap12_project07.c" />
     <ClCompile Include="..\..\hw04_108012047\chap13_project05\chap13_project05.c" />
     <ClCompile Include="..\..\hw04_108012047\chap13_project09\chap13_project09.c" />
     <ClCompile Include="..\..\hw04_108012047\chap13_project10\chap13_project10.c" />
+    <ClCompile Include="chap12_project02b.c" />
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
