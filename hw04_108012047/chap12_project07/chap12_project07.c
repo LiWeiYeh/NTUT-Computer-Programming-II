@@ -1,13 +1,13 @@
-///*****************************************************************/
+/*****************************************************************/
 ///* Class: Computer Programming II, Fall 2019                     */
 ///* Author: Li-Wei Yeh			                                 */
 ///* ID: 108012047						                         */
 ///* Date: 2019.10.04											     */
 ///* Purpose: Find the smallest and largest number in an array	 */
-///* Change History: log the change history of the program         */
+///* Change History: 2019.10.09 Fixed an error			         */
 ///*****************************************************************/
 //
-//// reverse sentence
+//// find max and min in an array
 //#define _CRT_SECURE_NO_WARNINGS
 //#define N 10
 //
@@ -19,7 +19,7 @@
 //
 //	*max = *min = *a;
 //
-//	for (p = a; p < a + n, p++;) {
+//	for (p = a; p < (a + n); p++) {
 //		if (*p > *max) {
 //			*max = *p;
 //		}
@@ -27,7 +27,7 @@
 //			*min = *p;
 //		}
 //	}
-//
+//	
 //}
 //
 //int main(void)
@@ -41,11 +41,16 @@
 //		scanf("%d", &NumbersArray[i]);
 //	}
 //
+//	printf("The entered numbers are: ");
+//	for (i = 0; i < N; i++) {
+//		printf("%d ", NumbersArray[i]);
+//	}
+//
 //	max_min(NumbersArray, N, &biggest, &smallest);
 //
+//	printf("Printing the smallest and largest numbers...\n");
 //	printf("Largest number is %d\n", biggest);
 //	printf("Smallest number is %d\n", smallest);
-//
 //
 //	return 0;
 //}
