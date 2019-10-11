@@ -4,7 +4,7 @@
 ///* ID: 108012047						                         */
 ///* Date: 2019.10.04												 */
 ///* Purpose: Reverses a sentence									 */
-///* Change History: log the change history of the program         */
+///* Change History: 2019.10.11 Finished the homework		         */
 ///*****************************************************************/
 //
 //// reverse sentence
@@ -18,30 +18,25 @@
 //	printf("Program to reverse a sentence\n");
 //
 //	char ch, sentence[MAX_SENTENCE_LENGTH + 1] = { ' ' }, terminator = '.',
-//		*start, *finish = sentence + 1, *p = sentence;
+//		*start, *finish = sentence + 1, *p;
 //
 //	printf("enter a sentence : ");
 //	while (finish <= sentence + MAX_SENTENCE_LENGTH) {
 //		ch = getchar();
-//		// change this
-//		if (ch == '\n' || ch == ' ' || ch == ',') {
+//		if (ch == '\n' || ch == '.' || ch == '?' || ch == '!') {
 //			terminator = ch;
 //			break;
 //		}
-//		// change this
-//		*p = ch;
-//		p++;
+//		*finish = ch;
+//		finish++;
 //	}
-//
-//	printf("The sentence is: %s\n", sentence);
 //
 //	printf("Reversal of sentence : ");
 //
-//	for (start = (finish); start >= sentence; start--) {
+//	for (start = (finish - 1); start >= sentence; start--) {
 //		if (*start == ' ') {
 //			for (p = start; p < finish; p++) {
-//				// change this
-//				putchar(start);
+//				putchar(*p);
 //			}
 //			finish = start;
 //		}
