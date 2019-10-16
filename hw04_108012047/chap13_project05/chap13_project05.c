@@ -1,9 +1,28 @@
-/*****************************************************************/
-/* Class: Computer Programming II, Fall 2019                     */
-/* Author: xxx (put your name here)                              */
-/* ID: 107990xxx (your student ID here)                          */
-/* Date: 2019.03.07 (put program development started date here   */
-/* Purpose: description of program function                      */
-/* Change History: log the change history of the program         */
-/*****************************************************************/
-
+///*****************************************************************/
+///* Class: Computer Programming II, Fall 2019                     */
+///* Author: Li-Wei Yeh						                     */
+///* ID: 108012047						                         */
+///* Date: 2019.10.16												 */
+///* Purpose: Sums the entered elements							 */
+///* Change History:												 */
+///*****************************************************************/
+//
+//// reverse sentence
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main(int argc, char * argv[])
+//{
+//	printf("Program to sum the entered elements\n");
+//
+//	int i, sum = 0;
+//
+//	for (i = 0; i < argv; i++) {
+//		sum += atoi(argv[i]);
+//	}
+//
+//	printf("total: %d\n", sum);
+//
+//	return 0;
+//}
