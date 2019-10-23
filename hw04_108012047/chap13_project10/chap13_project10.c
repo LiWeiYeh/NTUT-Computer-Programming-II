@@ -1,4 +1,4 @@
-/*****************************************************************/
+/////*****************************************************************/
 ///* Class: Computer Programming II, Fall 2019                     */
 ///* Author: Li-Wei Yeh						                     */
 ///* ID: 108012047						                         */
@@ -43,7 +43,7 @@
 //		p++;
 //	}
 //	// fi name becomes the initial letter
-//	sprintf(fi, ", %c", *p);
+//	sprintf(fi, ", %c.", *p);
 //
 //	// skip the first name
 //	while (*p != ' ') {
@@ -68,7 +68,7 @@
 //int main(void)
 //{
 //	printf("Program to count the amount of vowels in a sentence\n");
-//	
+//
 //	char name[NAME_LEN + 1];
 //
 //	read_line(name, NAME_LEN);
