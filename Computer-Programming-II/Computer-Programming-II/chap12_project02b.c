@@ -55,7 +55,7 @@
 //	// if the first halve of the sentence is the same as the last halve of the sentence
 //	if (p >= q) {
 //		// print that it's a palindrome
-//		printf("The message '%s' is a palindrome\n", msg);
+//		printf("The message is a palindrome\n");
 //	}
 //	// else
 //	else {
