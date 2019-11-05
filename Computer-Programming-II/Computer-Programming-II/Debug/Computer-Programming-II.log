@@ -1,7 +1,4 @@
 ﻿  chap13_project05.c
-  chap13_project10.c
   Main.c
-c:\users\liwei\source\repos\ntut-computer-programming-ii\computer-programming-ii\computer-programming-ii\main.c(61): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[81]'
-c:\users\liwei\source\repos\ntut-computer-programming-ii\computer-programming-ii\computer-programming-ii\main.c(61): warning C4024: 'count_vowels': different types for formal and actual parameter 1
   Generating Code...
   Computer-Programming-II.vcxproj -> C:\Users\liwei\source\repos\NTUT-Computer-Programming-II\Computer-Programming-II\Debug\Computer-Programming-II.exe

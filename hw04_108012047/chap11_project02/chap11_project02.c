@@ -26,11 +26,13 @@
 //	// counter for finding the closest index of the array
 //	int closest;
 //
-//	// if desired time is closer to first item in array, choose first item
+//	// check if desired time is closer to the first flight (next day) or last flight (previous day)
 //	if (desired_time < departures[0]) {
+//		// if desired time is closer to first item in array, choose first item
 //		if ((departures[0] - desired_time) < (MAX_MINUTES_IN_A_DAY - departures[SIZE_OF_DEPARTURES_ARRAY] + desired_time)) {
 //			closest = 0;
 //		}
+//		// if desired time is closer to last item in array, choose last item
 //		else {
 //			closest = SIZE_OF_DEPARTURES_ARRAY;
 //		}
