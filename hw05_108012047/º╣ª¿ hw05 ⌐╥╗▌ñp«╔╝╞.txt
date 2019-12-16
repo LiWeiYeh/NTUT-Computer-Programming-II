@@ -1,0 +1,7 @@
+﻿Name: xxx
+
+ID: xxx
+
+How many hours you spend on doing the homework? __________hours
+
+(remember to delete *.exe)

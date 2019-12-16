@@ -152,8 +152,20 @@
     <ClCompile Include="..\..\hw04_108012047\chap13_project05\chap13_project05.c" />
     <ClCompile Include="..\..\hw04_108012047\chap13_project09\chap13_project09.c" />
     <ClCompile Include="..\..\hw04_108012047\chap13_project10\chap13_project10.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap15_project03\chap15_project03.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap15_project04\chap15_project04.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap15_project05\chap15_project05.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap16_project04\chap16_project04.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap16_project05\chap16_project05.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap16_project06\chap16_project06.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap17_project05\chap17_project05.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap17_project06\chap17_project06.c" />
+    <ClCompile Include="..\..\hw05_108012047\chap17_project07\chap17_project07.c" />
     <ClCompile Include="chap12_project02b.c" />
     <ClCompile Include="Main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="quicksort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -51,5 +51,37 @@
     <ClCompile Include="..\..\hw04_108012047\chap12_project02\chap12_project02a.c">
       <Filter>School Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap17_project07\chap17_project07.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap15_project03\chap15_project03.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap15_project04\chap15_project04.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap15_project05\chap15_project05.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap16_project04\chap16_project04.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap16_project05\chap16_project05.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap16_project06\chap16_project06.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap17_project05\chap17_project05.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hw05_108012047\chap17_project06\chap17_project06.c">
+      <Filter>School Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="quicksort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

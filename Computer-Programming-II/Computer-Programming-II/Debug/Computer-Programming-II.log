@@ -1,2 +1,3 @@
 ﻿  Main.c
+c:\users\liwei\source\repos\ntut-computer-programming-ii\computer-programming-ii\computer-programming-ii\main.c(26): warning C4013: 'split' undefined; assuming extern returning int
   Computer-Programming-II.vcxproj -> C:\Users\liwei\source\repos\NTUT-Computer-Programming-II\Computer-Programming-II\Debug\Computer-Programming-II.exe
