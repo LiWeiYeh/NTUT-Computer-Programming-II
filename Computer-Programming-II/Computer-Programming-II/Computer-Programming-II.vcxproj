@@ -163,9 +163,13 @@
     <ClCompile Include="..\..\hw05_108012047\chap17_project07\chap17_project07.c" />
     <ClCompile Include="chap12_project02b.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="readline.c" />
+    <ClCompile Include="stack.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="quicksort.h" />
+    <ClInclude Include="readline.h" />
+    <ClInclude Include="stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
