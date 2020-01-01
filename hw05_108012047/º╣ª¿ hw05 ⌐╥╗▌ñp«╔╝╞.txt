@@ -1,7 +1,7 @@
-﻿Name: xxx
+﻿Name: Li-Wei Yeh
 
-ID: xxx
+ID: 108012047
 
-How many hours you spend on doing the homework? __________hours
+How many hours you spend on doing the homework? 5 hours
 
 (remember to delete *.exe)
